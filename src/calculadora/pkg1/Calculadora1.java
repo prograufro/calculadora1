@@ -21,7 +21,7 @@ public class Calculadora1 {
         double numero1, numero2, resultado;
         Scanner leer = new Scanner(System.in);
         do{
-        System.out.println("ingrese la operacion que desea realizar, 1=operaciones basicas, 2=mayor de dos numeros, 3=menor de dos numeros, 4=potencia de un numero, 5=porcentaje de un numero.");
+        System.out.println("ingrese la operacion que desea realizar, 1=operaciones basicas, 2=mayor y menor de dos numeros, 3=potencia de un numero, 4=porcentaje de un numero.");
          operacion = leer.nextInt();
         }while(operacion<1 || operacion>5);
          if(operacion == 1){
@@ -94,9 +94,39 @@ public class Calculadora1 {
                  System.out.println("ingrese el segundo numero");
                   numero2 = leer.nextDouble();
                   if(numero1 > numero2){
-                      System.out.println();
+                      System.out.println("el numero" +numero1+ "es el mayor");
+                       System.out.println();
+                        System.out.println("el numero " +numero2+ "es el menor ");
+                  }else{
+                      System.out.println("el numero " +numero2+ " es mayor");
+                       System.out.println();
+                        System.out.println("el numero " +numero1+ "es el menor");
                   }
                  
+             }else{
+                 if(operacion == 3){
+                     System.out.println("ingrese el numero base");
+                  numero1 = leer.nextDouble();
+             
+                 System.out.println("ingrese el exponente");
+                  numero2 = leer.nextDouble();
+                  
+                  resultado = (double) Math.pow(numero1,numero2); 
+                  
+                  System.out.println("el resultado es: "+resultado);
+                     
+                 }else{
+                     if(operacion == 4){
+                         
+                         System.out.println("ingrese el primer numero");
+                             numero1 = leer.nextDouble();
+             
+                         System.out.println("ingrese el segundo numero");
+                             numero2 = leer.nextDouble();
+                         
+                         
+                     }
+                 }
              }
          }
     
